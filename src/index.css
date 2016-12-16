@@ -1,5 +1,16 @@
-body {
+/*body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+}*/
+
+.login {
+  margin: auto;
+  width: 50%;
+}
+
+
+.loginForm2 {
+  margin: auto;
+  width: 50%;
 }
