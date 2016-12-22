@@ -1,11 +1,14 @@
+import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import './index.css';
-import { Router, Route, Link, browserHistory } from 'react-router';
+import Login from './components/Login';
+import { Router, Route, browserHistory } from 'react-router';
 
-
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
+ReactDOM.render((
+  <Router history={browserHistory}>
+    <Route path="/" component={App}>
+      <Route path="login" component={Login} />
+    </Route>
+  </Router>
+), document.getElementById('root'))

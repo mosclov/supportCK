@@ -1,24 +1,24 @@
 import React, { Component } from 'react';
 import injectTapEventPlugin from 'react-tap-event-plugin';
+
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
+import NavBar from './components/NavBar';
 import Login from './components/Login';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
+
 injectTapEventPlugin();
 
 class App extends Component {
-  getChildContext(){
-    return {muiTheme: getMuiTheme()};
-  }
   render() {
     return (
-      <div className="App">
-        <Login />
-      </div>
+      <MuiThemeProvider>
+        <div className="App">
+          <NavBar />
+          <Login />
+        </div>
+      </MuiThemeProvider>
     );
   }
 }
-
-App.childContextTypes = {
-  muiTheme: React.PropTypes.object.isRequired,
-};
 
 export default App;

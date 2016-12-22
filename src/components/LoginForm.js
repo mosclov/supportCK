@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 import muiThemeable from 'material-ui/styles/muiThemeable';
+import { Col } from 'react-flexbox-grid/lib/index'
 
 class LoginForm extends Component {
 
@@ -10,19 +11,20 @@ class LoginForm extends Component {
     e.preventDefault();
   }
   render() {
-    const style = {
-      margin: 50,
-      width: '40%',
+    const styleButton = {
+      width: '100%',
     };
+    const style = {
+      width: '100%',
+    };
+    
     return (
-      <div className="loginForm2">
         <form>
-          <TextField hintText="example@example.com" floatingLabelText="Email"/><br />
-          <TextField hintText="********" floatingLabelText="Password"
-            type="password"/><br />
-          <RaisedButton label="LOG IN" primary={true} style={style} type="submit" onClick={this._handleSubmit.bind(this)} />
+          <TextField className="loginForm2" style={style}  floatingLabelText="Email" floatingLabelFixed={true}/><br />
+          <TextField className="loginForm2" style={style}  floatingLabelText="Password"
+            type="password" floatingLabelFixed={true}/><br/><br/><br/>
+          <RaisedButton label="LOGIN" primary={true} style={styleButton} type="submit" className="loginButton" onClick={this._handleSubmit.bind(this)} />
         </form>
-      </div>
     );
   }
 }

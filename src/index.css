@@ -1,16 +1,30 @@
 /*body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
 }*/
 
-.login {
+/*.login {
   margin: auto;
-  width: 50%;
+  width: 45%;
+  padding: auto;
+}*/
+
+
+/*.loginForm2 {
+  margin-left: auto;
+  margin-right: auto;
 }
 
+.loginButton {
+  margin-left: 32.5%;
+  margin-right: 32.5%;
+  margin-top: 35px;
+}*/
 
-.loginForm2 {
-  margin: auto;
-  width: 50%;
+
+.support_title {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 65px;
+  margin-bottom: 65px;
 }
