@@ -1,13 +1,12 @@
-/*body {
-  margin: 0;
+body {
+  margin: 0 !important;
   padding: 0;
-}*/
+}
 
-/*.login {
-  margin: auto;
-  width: 45%;
-  padding: auto;
-}*/
+.ck-admin-logo {
+  height: 10px;
+}
+
 
 
 /*.loginForm2 {

@@ -17,13 +17,25 @@ class LoginForm extends Component {
     const style = {
       width: '100%',
     };
-    
+
     return (
         <form>
-          <TextField className="loginForm2" style={style}  floatingLabelText="Email" floatingLabelFixed={true}/><br />
-          <TextField className="loginForm2" style={style}  floatingLabelText="Password"
-            type="password" floatingLabelFixed={true}/><br/><br/><br/>
-          <RaisedButton label="LOGIN" primary={true} style={styleButton} type="submit" className="loginButton" onClick={this._handleSubmit.bind(this)} />
+          <TextField
+            className="loginForm2" style={style}  floatingLabelText="Email" floatingLabelFixed={true}
+          />
+          <br />
+          <TextField
+            className="loginForm2" style={style}  floatingLabelText="Password"
+            type="password" floatingLabelFixed={true}
+          />
+          <br/><br/><br/>
+          <RaisedButton
+            className="loginButton"
+            backgroundColor="#168644" labelColor="white"
+            label="LOGIN" type="submit"
+            fullWidth
+            onTouchTap={this._handleSubmit.bind(this)}
+          />
         </form>
     );
   }
