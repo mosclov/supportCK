@@ -51,6 +51,11 @@ class NavBar extends Component {
 
   render() {
 
+    const appBarStyle = {
+      backgroundColor: '#F0F2F2',
+      // margin: '0',
+    };
+
     const titleStyles = {
     title: {
       margin: '20%',}
@@ -59,9 +64,14 @@ class NavBar extends Component {
     return (
       <div>
         <AppBar
-          title={<span style={titleStyles.title}>CourseKey</span>}
+          style={appBarStyle}
+          title={<img
+            className="ck-admin-nav-logo"
+            src={'../../public/images/cksupportadminlogo.png'}/>}
           showMenuIconButton={false}
-          // iconElementLeft={<IconButton><NavigationClose /></IconButton>}
+          // iconElementLeft={<img
+          //   className="ck-admin-nav-logo"
+          //   src={'../../public/images/cksupportadminlogo.png'}/>}
           // iconElementRight={this.state.logged ? <Logged /> : <Loggedin />}
         />
       </div>
