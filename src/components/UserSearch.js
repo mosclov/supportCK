@@ -15,6 +15,11 @@ class UserSearch extends Component {
 
   handleChange = (event, index, value) => this.setState({value});
 
+  _handleSubmit(e){
+    alert("Search Submitted");
+    e.preventDefault();
+  }
+
   render() {
     const style = {
       width: '15%',
@@ -77,7 +82,7 @@ class UserSearch extends Component {
               <MenuItem value={2} primaryText="Student" />
               <MenuItem value={3} primaryText="Teacher" />
             </SelectField>
-            <RaisedButton label="Search" backgroundColor="#168644" labelColor="white" />
+            <RaisedButton label="Search" backgroundColor="#168644" labelColor="white" onTouchTap={this._handleSubmit.bind(this)} />
           </Col>
         </Row>
         <Row>

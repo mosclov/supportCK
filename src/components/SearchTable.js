@@ -48,6 +48,7 @@ const tableData = [
 ];
 
 class SearchTable extends Component {
+
   constructor(props) {
     super(props);
 
@@ -61,7 +62,6 @@ class SearchTable extends Component {
       enableSelectAll: false,
       deselectOnClickaway: true,
       showCheckboxes: false,
-      height: '300px',
     };
   }
 
@@ -71,9 +71,6 @@ class SearchTable extends Component {
     });
   };
 
-  handleChange = (event) => {
-    this.setState({height: event.target.value});
-  };
 
   render() {
     const style = {
@@ -82,10 +79,13 @@ class SearchTable extends Component {
       marginBottom: 0,
     };
 
+    const bottomBorderStyle = {
+      borderColor: '#168644',
+    };
+
     return (
       <div className="search_table">
         <Table
-          height={this.state.height}
           fixedHeader={this.state.fixedHeader}
           fixedFooter={this.state.fixedFooter}
           selectable={this.state.selectable}
@@ -96,7 +96,7 @@ class SearchTable extends Component {
             adjustForCheckbox={this.state.showCheckboxes}
             enableSelectAll={this.state.enableSelectAll}
           >
-            <TableRow>
+            <TableRow style={bottomBorderStyle}>
               <TableHeaderColumn className="table_pic" tooltip="User Pic"></TableHeaderColumn>
               <TableHeaderColumn className="table_header" tooltip="The First Name" style={style}>First name</TableHeaderColumn>
               <TableHeaderColumn className="table_header"  tooltip="The Last Name" style={style}>Last Name</TableHeaderColumn>
